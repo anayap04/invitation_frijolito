@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+/* 8-bit Pixel Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Base Typography */
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 8-bit Pixel Styles */
+.pixel-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-text-medium {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-text-small {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Pixel Borders */
+.pixel-border {
+  border: 4px solid #000;
+  box-shadow: 
+    0 0 0 4px currentColor,
+    4px 4px 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.pixel-border-thin {
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Pixel Box */
+.pixel-box {
+  box-shadow: 
+    2px 2px 0 0 rgba(0, 0, 0, 0.2),
+    -2px -2px 0 0 rgba(255, 255, 255, 0.2) inset;
+}
+
+/* Shadow Effects */
+.shadow-pixel {
+  box-shadow: 
+    8px 8px 0 0 rgba(0, 0, 0, 0.1),
+    12px 12px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.shadow-pixel-lg {
+  box-shadow: 
+    6px 6px 0 0 rgba(0, 0, 0, 0.3),
+    10px 10px 0 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Pixel Cloud */
+.pixel-cloud {
+  background: 
+    linear-gradient(white, white),
+    linear-gradient(white, white),
+    linear-gradient(white, white);
+  background-size: 
+    60% 40%,
+    40% 40%, 
+    50% 40%;
+  background-position: 
+    0% 50%,
+    100% 50%,
+    50% 0%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.1));
+}
+
+/* Pixel Progress Bar */
+.pixel-progress {
+  animation: fillProgress 2s ease-in-out forwards;
+}
+
+@keyframes fillProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .pixel-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  .pixel-text-medium {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .pixel-text-small {
+    font-size: 0.625rem;
+    line-height: 1.5;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+  outline: 3px solid #ec4899;
+  outline-offset: 2px;
+}
